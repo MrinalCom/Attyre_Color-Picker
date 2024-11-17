@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef} from "react";
 import { Upload } from "lucide-react";
 import ColorPicker from "./components/ColorPicker";
 import PreferenceSelector from "./components/PreferenceSelector";

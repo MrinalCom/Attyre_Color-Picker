@@ -1,5 +1,4 @@
 import React from 'react';
-import { Droplet, Pipette } from 'lucide-react';
 
 interface ColorPickerProps {
   label: string;
@@ -8,19 +7,7 @@ interface ColorPickerProps {
 }
 
 const ColorPicker: React.FC<ColorPickerProps> = ({ label, color, onChange }) => {
-  const handleEyeDropper = async () => {
-    if ('EyeDropper' in window) {
-      try {
-        const eyeDropper = new (window as any).EyeDropper();
-        const result = await eyeDropper.open();
-        onChange(result.sRGBHex);
-      } catch (err) {
-        console.error('EyeDropper failed:', err);
-      }
-    } else {
-      console.warn('EyeDropper API not supported');
-    }
-  };
+  
 
   return (
     <div className="flex items-center space-x-4">
